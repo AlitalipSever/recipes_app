@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ResponsiveButton extends StatelessWidget {
   bool? isResponsive;
   double? width;
@@ -13,10 +14,10 @@ class ResponsiveButton extends StatelessWidget {
         height: 60,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Color.fromARGB(255, 151, 159, 11)),
+            color: const Color.fromARGB(255, 151, 159, 11)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Icon(Icons.keyboard_double_arrow_right)],
+          children: const [Icon(Icons.keyboard_double_arrow_right)],
         ));
   }
 }

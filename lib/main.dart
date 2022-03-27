@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recipes_app/pages/navpages/main_page.dart';
-import 'package:recipes_app/pages/welcome_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:recipes_app/cubit/app_cubit_logics.dart';
+import 'package:recipes_app/cubit/app_cubits.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'recipes_app',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MainPage(),
-    );
+        title: 'recipes_app',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BlocProvider<AppCubits>(
+          create: (context) => AppCubits(),
+          child: const AppCubitLogics(),
+        ));
   }
 }

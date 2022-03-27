@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:recipes_app/cubit/app_cubits.dart';
 import 'package:recipes_app/widgets/app_large_text.dart';
 import 'package:recipes_app/widgets/app_text.dart';
 import 'package:recipes_app/widgets/responsive_button.dart';
@@ -36,7 +38,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
                 child: Container(
                   margin: const EdgeInsets.only(
-                      top: 150, left: 20, right: 20, bottom: 500),
+                      top: 150, left: 20, right: 20, bottom: 300),
                   color: Colors.black.withOpacity(0.1),
                   child: Row(
                     children: [
@@ -52,7 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             color: Colors.white,
                             size: 30,
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           Container(
                             width: 250,
                             child: AppText(
@@ -60,9 +62,17 @@ class _WelcomePageState extends State<WelcomePage> {
                                 size: 14,
                                 color: Colors.blue),
                           ),
-                          SizedBox(height: 40),
-                          ResponsiveButton(
-                            width: 120,
+                          const SizedBox(height: 40),
+                          GestureDetector(
+                            onTap: () {
+                              BlocProvider.of<AppCubits>(context).getData();
+                            },
+                            child: Container(
+                              width: 200,
+                              child: ResponsiveButton(
+                                width: 200,
+                              ),
+                            ),
                           )
                         ],
                       )
