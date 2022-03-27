@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipes_app/cubit/app_cubit_states.dart';
 import 'package:recipes_app/cubit/app_cubits.dart';
+import 'package:recipes_app/pages/category_page.dart';
 import 'package:recipes_app/pages/details_page.dart';
 import 'package:recipes_app/pages/welcome_page.dart';
 
@@ -25,6 +26,8 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
         return const MainPage();
       } else if (state is DetailsPageState) {
         return const DetailsPage();
+      } else if (state is CategoryPageState) {
+        return const CategoryPage();
       } else {
         return Container();
       }
