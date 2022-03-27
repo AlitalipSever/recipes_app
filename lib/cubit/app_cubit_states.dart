@@ -25,6 +25,14 @@ class DetailsPageState extends CubitStates {
 
   DetailsPageState(this.detail);
   @override
-  // TODO: implement props
   List<Object?> get props => [detail];
+}
+
+class CategoryPageState extends CubitStates {
+  List category;
+  String name;
+
+  CategoryPageState(this.category, this.name);
+  @override
+  List<Object?> get props => [category, name];
 }
