@@ -21,7 +21,7 @@ class MainPageState extends CubitStates {
 }
 
 class DetailsPageState extends CubitStates {
-  final String detail;
+  Map detail;
 
   DetailsPageState(this.detail);
   @override

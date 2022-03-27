@@ -30,7 +30,8 @@ class SlideItems extends StatelessWidget {
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: AssetImage(pics[index]), fit: BoxFit.fill)));
+                        image: AssetImage(pics[index]["image"]),
+                        fit: BoxFit.fill)));
           }),
     );
   }

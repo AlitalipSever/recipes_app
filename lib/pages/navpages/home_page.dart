@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:recipes_app/widgets/slide_items.dart';
+import 'package:recipes_app/data/recipes_mock_data.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,14 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List recipe_pics = [
-    "assets/recipe_pics/one-1.jpeg",
-    "assets/recipe_pics/one-2.jpeg",
-    "assets/recipe_pics/one-3.jpeg",
-    "assets/recipe_pics/one-4.jpeg",
-    "assets/recipe_pics/one-5.jpeg",
-    "assets/recipe_pics/one-6.jpeg"
-  ];
+  var recipe_pics = recipePics;
 
   @override
   Widget build(BuildContext context) {
