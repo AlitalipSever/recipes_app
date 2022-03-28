@@ -54,7 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             size: 30,
                           ),
                           const SizedBox(height: 20),
-                          Container(
+                          SizedBox(
                             width: 250,
                             child: AppText(
                                 text: "Lorem Ipsum Soler di amet",
@@ -64,9 +64,10 @@ class _WelcomePageState extends State<WelcomePage> {
                           const SizedBox(height: 40),
                           GestureDetector(
                             onTap: () {
-                              BlocProvider.of<AppCubits>(context).getData();
+                              BlocProvider.of<AppCubits>(context)
+                                  .getLoginPage();
                             },
-                            child: Container(
+                            child: SizedBox(
                               width: 200,
                               child: ResponsiveButton(
                                 width: 200,

@@ -24,7 +24,7 @@ class DetailsPage extends StatelessWidget {
                     onTap: () {
                       BlocProvider.of<AppCubits>(context).getData();
                     },
-                    child: Container(
+                    child: SizedBox(
                       width: 200,
                       child: ResponsiveButtonBack(
                         width: 200,

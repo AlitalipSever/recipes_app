@@ -6,8 +6,9 @@ class BarItemPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+      // ignore: avoid_unnecessary_containers
       child: Container(
-        child: Text("Bar Item Page"),
+        child: const Text("Bar Item Page"),
       ),
     );
   }

@@ -4,6 +4,8 @@ import 'package:recipes_app/cubit/app_cubit_states.dart';
 import 'package:recipes_app/cubit/app_cubits.dart';
 import 'package:recipes_app/pages/category_page.dart';
 import 'package:recipes_app/pages/details_page.dart';
+import 'package:recipes_app/pages/login_loading_page.dart';
+import 'package:recipes_app/pages/login_page.dart';
 import 'package:recipes_app/pages/welcome_page.dart';
 
 import '../pages/navpages/main_page.dart';
@@ -28,6 +30,10 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
         return const DetailsPage();
       } else if (state is CategoryPageState) {
         return const CategoryPage();
+      } else if (state is LoginLoadingPageState) {
+        return const LoginLoadingPage();
+      } else if (state is LoginPageState) {
+        return const LoginPage();
       } else {
         return Container();
       }

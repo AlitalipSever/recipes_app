@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'recipes_app',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: BlocProvider<AppCubits>(
-          create: (context) => AppCubits(),
-          child: const AppCubitLogics(),
-        ));
+      title: 'recipes_app',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: BlocProvider<AppCubits>(
+        create: (context) => AppCubits(),
+        child: const AppCubitLogics(),
+      ),
+    );
   }
 }

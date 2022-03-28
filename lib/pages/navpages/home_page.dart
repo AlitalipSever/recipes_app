@@ -11,9 +11,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // ignore: non_constant_identifier_names
   var recipe_pics = recipePics;
+  // ignore: non_constant_identifier_names
   var recipe_pics2 = recipePics;
+  // ignore: non_constant_identifier_names
   var recipe_pics3 = recipePics;
+  // ignore: non_constant_identifier_names
   var recipe_pics4 = recipePics;
 
   @override
