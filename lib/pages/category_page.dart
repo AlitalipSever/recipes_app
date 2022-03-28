@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:recipes_app/widgets/slide_items_vertical..dart';
+import 'package:recipes_app/widgets/slide_items_vertical.dart';
 
 import '../cubit/app_cubit_states.dart';
 import '../cubit/app_cubits.dart';

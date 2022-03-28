@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipes_app/cubit/app_cubits.dart';
 
 class SlideItems extends StatelessWidget {
-  List pics;
-  SlideItems({Key? key, required this.pics}) : super(key: key);
+  final List pics;
+  const SlideItems({Key? key, required this.pics}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
